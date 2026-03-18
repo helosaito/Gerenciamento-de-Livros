@@ -3,17 +3,23 @@ package com.lachimia.saito.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "TBL_PRODUTO")
+@Table(name = "TBL_TABELA")
 public class LivroModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "Titulo do livro")
     private  String Titulo;
+
+    @Column(name = "Nome do Autor")
     private  String Autor;
+
+    @Column(name = "Data de Publicacao")
     private Integer anoPublicacao;
 
-    public ProdutoModel(){
+    public LivroModel(){
     }
 
     public Long getId() {
